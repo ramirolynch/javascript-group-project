@@ -1,0 +1,29 @@
+body {
+    margin:0;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+ul {
+    display:flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    margin:0;
+    padding-left:0;
+}
+
+li {
+    margin:0;
+}
