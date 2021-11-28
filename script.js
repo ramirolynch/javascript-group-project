@@ -54,7 +54,7 @@
 
     for (let i=0; i<allPotions.length; i++) {
     
-        allPotionsItems[i].innerText = `${allPotions[i].name} $${allPotions[i].price}`
+        allPotionsItems[i].innerText = `${allPotions[i].name} ${allPotions[i].price}`
     }
 
 
