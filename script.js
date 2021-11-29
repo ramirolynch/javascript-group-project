@@ -69,12 +69,19 @@
         const id = event.target.id
         listItem.innerText = `${allPotions[id].name} $${allPotions[id].price}`
         total += parseInt(allPotions[id].price)
+
+        cartArea.append(listItem)
+         
+        if (document.querySelector('#totalCart')) {
+            document.querySelector('#totalCart').remove()
+        }
         
-        let totalCart = document.querySelector('#totalCart')
+        let totalCart = document.createElement('li')
+        totalCart.setAttribute('id', 'totalCart')
         totalCart.innerText = `Total: $${total}`
-        
-        cartArea.prepend(listItem)
-        
+
+        cartArea.append(totalCart)
+
         
 
         console.log(total)
