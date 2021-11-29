@@ -73,7 +73,7 @@
         let totalCart = document.querySelector('#totalCart')
         totalCart.innerText = `Total: $${total}`
         
-        cartArea.append(listItem)
+        cartArea.prepend(listItem)
         
         
 
