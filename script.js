@@ -75,14 +75,12 @@
         if (document.querySelector('#totalCart')) {
             document.querySelector('#totalCart').remove()
         }
-        
+
         let totalCart = document.createElement('li')
         totalCart.setAttribute('id', 'totalCart')
         totalCart.innerText = `Total: $${total}`
 
-        cartArea.append(totalCart)
-
-        
+        cartArea.append(totalCart)    
 
         console.log(total)
 

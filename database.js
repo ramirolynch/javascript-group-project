@@ -1,67 +1,67 @@
 const allPotions = [
     {
-        name: 'Potion 1',
+        name: 'Draught of Peace',
         price:4,
-        category: "",
-        description: ""
+        category: 'Cold',
+        description: 'Relieves anxiety and agitation',
     },
     {
-        name: 'Potion 2',
+        name: 'Amortentia',
         price: 3,
-        category: "",
-        description: ""
+        category: 'Hot',
+        description: 'Induces an intense artificial love',
 
     },
     {
-        name: 'Potion 3',
+        name: 'Beautification Potion',
         price:5,
-        category: "",
-        description: ""
+        category: 'Cold',
+        description: 'Makes one temporarily attractive',
     },
     {
-        name: 'Potion 4',
+        name: 'Wolfsbane Potion',
         price: 5,
-        category: "",
-        description: ""
+        category: 'Hot',
+        description: 'Relieves the effects of lycanthropy',
 
     },
     {
-        name: 'Potion 5',
+        name: 'Skele-Gro',
         price:4,
-        category: "",
-        description: ""
+        category: 'Cold',
+        description: 'Causes lost bones to regrow',
     },
     {
-        name: 'Potion 6',
+        name: 'Invisibility Potion',
         price: 3,
-        category: "",
-        description: ""
+        category: 'Hot',
+        description: 'Renders one temporarily invisible',
 
     },
     {
-        name: 'Potion 7',
+        name: 'Veritaserum',
         price:5,
-        category: "",
-        description: ""
+        category: 'Cold',
+        description: 'Forces the user to tell the truth when questioned',
     },
     {
-        name: 'Potion 8',
+        name: 'Polyjuice Potion',
         price: 5,
-        category: "",
-        description: ""
+        category: 'Hot',
+        description: 'Changes appearance to match the hairs bearer',
     },
     {
-        name: 'Potion 9',
+        name: 'Felix Felicis',
         price:5,
-        category: "",
-        description: ""
+        category: 'Cold',
+        description: 'Temporarily grants the recipient luck',
     
     },
     {
-        name: 'Potion 10',
+        name: 'Elixir of Life',
         price: 5, 
-        category: "cold" ,
-        description: "this is potion 10",
+        category: 'Cold' ,
+        description: 'Extends ones life indefinitely',
 
     },
     ]
