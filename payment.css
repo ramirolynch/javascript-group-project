@@ -1,0 +1,39 @@
+body{
+    background-color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+main{
+    display: flex;
+    flex-direction: column;
+
+}
+footer{
+    display: flex;
+    flex-direction: column;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+
+
+#pay-now-button{
+    background-color: blueviolet;
+    color:whitesmoke;
+    width: 100px;
+    height: 25px;
+    border-radius: 10%;
+}
