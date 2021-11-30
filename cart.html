@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Document</title>
+
+    <style>
+        body{
+            height: 100vh;
+        }
+        header{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #close {
+            font-size: larger;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover {
+        
+            transform: scale(1.3)
+        }
+
+        #footer {
+            background-color: blueviolet;
+        }
+
+        #checkoutLink {
+            text-decoration: none;
+            color: cornsilk;
+        }
+
+        footer {
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            left: 0;  
+        }
+
+        #subtotal {
+            padding: 24px 20px;
+        }
+
+        #footer{
+            height: 50px;
+            color: cornsilk;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 20px;
+            font-weight: 700;
+            display: flex;
+    
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        span {
+            position: absolute;
+            right: 50px;
+            
+        }
+
+        li{
+            font-weight: 700;
+        }
+
+    </style>
+</head>
+<body>
+    
+<header>
+    <h2> Your Order </h2>
+    <a id="close" href="index.html">x</a>
+
+</header>
+
+<main>
+    <ul>
+        <span>$</span>
+        <li>sample cart item 1 placeholder </li> <span>$</span>
+        <li>sample cart item 2 placeholder </li> 
+        
+    </ul>
+</main>
+
+<footer>
+    <div id="subtotal">
+        Subtotal <span>$</span>
+        <br>
+        Tax <span>$</span>
+    </div>
+
+    <div id="footer">
+        <a id="checkoutLink" href="payment.html"><i class="material-icons">shopping_cart</i>Checkout</a>
+        <span id="cartTotal">$</span>
+    </div>
+
+</footer>
+
+
+
+
+
+
+
+    <script src="database.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
