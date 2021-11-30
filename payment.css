@@ -28,6 +28,10 @@ form{
     width: 300px;
 }
 
+#card-information{
+    display: none;
+}
+
 
 
 #pay-now-button{

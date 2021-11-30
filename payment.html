@@ -14,30 +14,30 @@
     </header>
     <main>
         <h3>Customer Information</h3>
-        <form>
-            <label for="first-name">First Name</label>
-            <input type="text" id="first-name" name="first-name">
+        <form id = "customer-information">
+            <label for="first-name">First Name (required)</label>
+            <input type="text" id="first-name" name="first-name" placeholder="First" required>
             <label for="last-name">Last Name</label>
-            <input type="text" id="last-name" name="last-name">
+            <input type="text" id="last-name" name="last-name" placeholder="Last">
             <label for="email">Email Address</label>
-            <input type="text" id="email" name="email">
+            <input type="email" id="email" name="email" placeholder="user@email.com">
             <label for="phone-number">Phone Number</label>
-            <input type="text" id="phone-number" name="phone-number">
+            <input type="tel" id="phone-number" name="phone-number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" maxlength="12" placeholder="xxx-xxx-xxxx">
         </form>
         <h3>Payment Method</h3>
-        <input type="checkbox" id="cash-pay" name="cash-pay" value="cash">
-        <label for="cash-pay"> Pay with cash </label><br>
-        <input type="checkbox" id="card-pay" name="card-pay" value="card-pay">
-        <label for="card-pay"> Pay with card </label><br>
-        <form>
+        <input type="radio" id="cash" name="payment" value="cash">
+        <label for="cash"> Pay with cash </label><br>
+        <input type="radio" id="card" name="payment" value="card">
+        <label for="card"> Pay with card </label><br>
+        <form id= "card-information">
             <label for="card-number">Card Number</label>
-            <input type="text" id="card-number" name="card-number">
+            <input id="card-number" type="tel" pattern="\d*" maxlength="19" placeholder="xxxx xxxx xxxx xxxx">
             <label for="exp-date">Expiration Date</label>
-            <input type="text" id="exp-date" name="exp-date">
+            <input type="tel" id="exp-date" name="exp-date" pattern="\d*" maxlength="5" placeholder="MM/YY">
             <label for="cvv">CVV</label>
-            <input type="text" id="cvv" name="cvv">
+            <input type="tel" id="cvv" name="cvv" pattern="\d*" maxlength="3" placeholder="###">
             <label for="zip">Zip Code</label>
-            <input type="text" id="zip" name="zip">
+            <input type="tel" id="zip" name="zip" pattern="\d*" maxlength="10" placeholder="12345">
         </form>
         <section>
             <h3>Your Order Summary</h3>
@@ -52,5 +52,6 @@
         <p> terms of service legal-ese placeholder</p>
         <button id= "pay-now-button">Pay Now</button>
     </footer>
+    <script src="payment.js"></script>
 </body>
 </html>
