@@ -19,8 +19,12 @@ main {
 
 }
 
-main > section {
+main > section, main > aside {
     width:100%;
+}
+
+main > section > h2, main > aside > h2 {
+    margin-block-end: 0;
 }
 
 ul {
@@ -54,6 +58,13 @@ ul {
     border-bottom: 0.2em solid blueviolet;
 }
 
+#cartList > li {
+    margin:0;
+    height:50px;
+    display:flex;
+    align-items: end;
+    border-bottom: 0.2em solid blueviolet;
+}
 
 nav > ul {
     display:flex;
@@ -79,10 +90,12 @@ footer {
     position: fixed;
     bottom:0;
     display:flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    padding-left:1em;
     width:100%;
-    padding-bottom:0.5em;
+    height: 50px;
+    background-color: blueviolet;
 }
 
 /* body > aside {
