@@ -141,6 +141,7 @@ coldButton.addEventListener('click', event => {
     })
 
     let total = 0;
+    let qty;
 
     addsubstractUl.addEventListener('click', event => {
 
@@ -150,14 +151,18 @@ coldButton.addEventListener('click', event => {
 
         if (total >= 0) {
         totalCart.innerText = `Total: $ ${total}.00`
+       
         } 
         else {
             total = 0;
             totalCart.innerText = `Total: $ ${0}.00`
+           
         }
 
-        //Cart.push(Cart.addedProducts.name = 'test')
-        //console.log(Cart)
+        let addProductToCart = { name: allPotions[id].name, price: allPotions[id].price};
+
+        Cart.addedProducts.push(addProductToCart)
+        console.log(Cart.addedProducts[2])
 
 
     } else if (event.target.innerText === 'remove') {
@@ -165,10 +170,12 @@ coldButton.addEventListener('click', event => {
 
         if (total >= 0) {
         totalCart.innerText = `Total: $ ${total}.00`
+       
         }
         else {
             total = 0;
             totalCart.innerText = `Total: $ ${0}.00`
+           
         }
 
     }
