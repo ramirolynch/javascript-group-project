@@ -151,6 +151,7 @@ coldButton.addEventListener('click', event => {
 
         if (total >= 0) {
         totalCart.innerText = `Total: $ ${total}.00`
+        footerButton.innerText = `Add to Cart (${total / allPotions[id].price})`
        
         } 
         else {
@@ -170,6 +171,7 @@ coldButton.addEventListener('click', event => {
 
         if (total >= 0) {
         totalCart.innerText = `Total: $ ${total}.00`
+        footerButton.innerText = `Add to Cart (${total / allPotions[id].price})`
        
         }
         else {
