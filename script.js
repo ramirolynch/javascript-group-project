@@ -79,7 +79,29 @@ coldButton.addEventListener('click', event => {
     const footer = document.querySelector('footer')
     const footerButton = document.querySelector('footer>button')
    
-    let total = 0;
+
+    const addsubstractUl = document.createElement('ul')
+    addsubstractUl.classList.add('flex')
+
+    const addButton = document.createElement('li')
+    const itagAddButton = document.createElement('i')
+    itagAddButton.classList.add('material-icons')
+    itagAddButton.innerText = 'add'
+
+    const substractButton = document.createElement('li')
+    const itagRemoveButton = document.createElement('i')
+    itagRemoveButton.classList.add('material-icons')
+    itagRemoveButton.innerText = 'remove'
+
+    let totalCart = document.createElement('span')
+    totalCart.setAttribute('id', 'totalCart')
+    totalCart.style.color = 'white'
+    totalCart.style.marginRight = '1.5em'
+    totalCart.innerText = `Total: $ 0.00`
+
+    footer.append(totalCart)   
+
+    let id;
 
     productSection.addEventListener('click', event => {
 
@@ -89,26 +111,61 @@ coldButton.addEventListener('click', event => {
 
         const listItem = document.createElement('li')
         
-        const id = event.target.id
+        id = event.target.id
+        listItem.setAttribute('id', id)
         listItem.innerText = `${allPotions[id].name} (${allPotions[id].category}) $${allPotions[id].price}`
+
+       
+        addButton.append(itagAddButton)
+        substractButton.append(itagRemoveButton)
+        
+        addsubstractUl.append(addButton)
+        addsubstractUl.append(substractButton)
+
         listItem.classList.add('addToCart')
-        total += parseInt(allPotions[id].price)
 
         cartArea.append(listItem)
+        
+        listItem.append(addsubstractUl)
          
         if (document.querySelector('#totalCart')) {
             document.querySelector('#totalCart').remove()
         }
 
-        let totalCart = document.createElement('span')
-        totalCart.setAttribute('id', 'totalCart')
-        totalCart.style.color = 'white'
-        totalCart.style.marginRight = '1.5em'
-        totalCart.innerText = `Total: $${total}`
+        totalCart.innerText = `Total: $ 0.00`
 
         footer.append(totalCart)   
         
     })
+
+    let total = 0;
+
+    addsubstractUl.addEventListener('click', event => {
+
+    if (event.target.innerText === 'add') {
+
+        total += parseInt(allPotions[id].price)
+        totalCart.innerText = `Total: $${total}.00`
+
+        //Cart.push(Cart.addedProducts.name = 'test')
+        //console.log(Cart)
+
+
+    } else if (event.target.innerText === 'remove') {
+        total -= parseInt(allPotions[id].price)
+
+        if (total >= 0) {
+        totalCart.innerText = `Total: $${total}.00`
+        }
+        else {
+            totalCart.innerText = `Total: $ 0.00`
+        }
+
+    }
+
+    })
+
+
 
 
 })();
