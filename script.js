@@ -223,6 +223,10 @@ coldButton.addEventListener('click', event => {
 
             }
 
+            
+            window.open("cart.html");
+              
+
 
         }
         else {
