@@ -141,7 +141,7 @@ coldButton.addEventListener('click', event => {
     })
 
     let total = 0;
-    let qty;
+   
 
     addsubstractUl.addEventListener('click', event => {
 
@@ -160,10 +160,10 @@ coldButton.addEventListener('click', event => {
            
         }
 
-        let addProductToCart = { name: allPotions[id].name, price: allPotions[id].price};
+        // let addProductToCart = { name: allPotions[id].name, price: allPotions[id].price};
 
-        Cart.addedProducts.push(addProductToCart)
-        console.log(Cart.addedProducts[2])
+        // Cart.addedProducts.push(addProductToCart)
+        // console.log(Cart.addedProducts[2])
 
 
     } else if (event.target.innerText === 'remove') {
@@ -183,6 +183,33 @@ coldButton.addEventListener('click', event => {
     }
 
     })
+
+    let qty; 
+
+    footerButton.addEventListener('click', event => {
+
+        if(total > 0) {
+            qty = total / allPotions[id].price;
+
+            let addProductToCart = { name: allPotions[id].name, price: allPotions[id].price, quantity: qty};
+            Cart.addedProducts.push(addProductToCart)
+
+            const cartString = JSON.stringify(Cart)
+
+            localStorage.setItem('cartContent', cartString);
+
+            console.log(JSON.parse(localStorage.getItem('cartContent')))
+
+
+        }
+        else {
+            console.log('you havent added items to cart');
+        }
+
+
+    })
+
+
 
 
 
