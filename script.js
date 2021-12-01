@@ -71,6 +71,7 @@ coldButton.addEventListener('click', event => {
 
 // this is the pop up functionality
 
+    const headerNav = document.querySelector('header>nav>ul')
     const productSection = document.querySelector('#productSection')
     const cartAside = document.querySelector('#cartAside')
 
@@ -105,6 +106,7 @@ coldButton.addEventListener('click', event => {
 
     productSection.addEventListener('click', event => {
 
+        headerNav.style.display = 'none'
         productSection.style.display = 'none';
         cartAside.style.display = 'block';
         footerButton.innerText = 'Add to Cart'
@@ -145,7 +147,14 @@ coldButton.addEventListener('click', event => {
     if (event.target.innerText === 'add') {
 
         total += parseInt(allPotions[id].price)
-        totalCart.innerText = `Total: $${total}.00`
+
+        if (total >= 0) {
+        totalCart.innerText = `Total: $ ${total}.00`
+        } 
+        else {
+            total = 0;
+            totalCart.innerText = `Total: $ ${0}.00`
+        }
 
         //Cart.push(Cart.addedProducts.name = 'test')
         //console.log(Cart)
@@ -155,10 +164,11 @@ coldButton.addEventListener('click', event => {
         total -= parseInt(allPotions[id].price)
 
         if (total >= 0) {
-        totalCart.innerText = `Total: $${total}.00`
+        totalCart.innerText = `Total: $ ${total}.00`
         }
         else {
-            totalCart.innerText = `Total: $ 0.00`
+            total = 0;
+            totalCart.innerText = `Total: $ ${0}.00`
         }
 
     }
