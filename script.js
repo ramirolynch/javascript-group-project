@@ -100,6 +100,10 @@ coldButton.addEventListener('click', event => {
     totalCart.style.marginRight = '1.5em'
     totalCart.innerText = `Total: $ 0.00`
 
+    const itemDescription = document.createElement('li')
+
+    const listItem = document.createElement('li')
+
     footer.append(totalCart)   
 
     let id;
@@ -109,13 +113,19 @@ coldButton.addEventListener('click', event => {
         headerNav.style.display = 'none'
         productSection.style.display = 'none';
         cartAside.style.display = 'block';
-        footerButton.innerText = 'Add to Cart'
+        footerButton.innerText = 'Add to Cart (0)'
 
-        const listItem = document.createElement('li')
         
+
+        console.log(itemDescription)
+
+        
+
         id = event.target.id
         listItem.setAttribute('id', id)
         listItem.innerText = `${allPotions[id].name} (${allPotions[id].category}) $${allPotions[id].price}`
+
+        itemDescription.innerText = `${allPotions[id].description}`
 
        
         addButton.append(itagAddButton)
@@ -127,6 +137,7 @@ coldButton.addEventListener('click', event => {
         listItem.classList.add('addToCart')
 
         cartArea.append(listItem)
+        cartArea.append(itemDescription)
         
         listItem.append(addsubstractUl)
          
@@ -192,13 +203,25 @@ coldButton.addEventListener('click', event => {
             qty = total / allPotions[id].price;
 
             let addProductToCart = { name: allPotions[id].name, price: allPotions[id].price, quantity: qty};
-            Cart.addedProducts.push(addProductToCart)
+            
 
-            const cartString = JSON.stringify(Cart)
+            if (localStorage.length > 0) {
+                // do this if localStorage already exists
+                let storedItems = JSON.parse(localStorage.cartContent);
+                storedItems.addedProducts.push(addProductToCart)
 
-            localStorage.setItem('cartContent', cartString);
+                let itemsString = JSON.stringify(storedItems)
+                localStorage.setItem('cartContent', itemsString)
 
-            console.log(JSON.parse(localStorage.getItem('cartContent')))
+            }
+            else {
+
+                Cart.addedProducts.push(addProductToCart)
+                const cartString = JSON.stringify(Cart)
+                localStorage.setItem('cartContent', cartString);
+                console.log(JSON.parse(localStorage.getItem('cartContent')))
+
+            }
 
 
         }
