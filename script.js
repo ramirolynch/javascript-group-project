@@ -233,8 +233,4 @@ coldButton.addEventListener('click', event => {
     })
 
 
-
-
-
-
 })();
