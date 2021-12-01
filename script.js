@@ -185,7 +185,7 @@ coldButton.addEventListener('click', event => {
     })
 
     let qty; 
-
+// this is the add to cart functionality
     footerButton.addEventListener('click', event => {
 
         if(total > 0) {
