@@ -222,11 +222,8 @@ coldButton.addEventListener('click', event => {
                 console.log(JSON.parse(localStorage.getItem('cartContent')))
 
             }
-
-            
-            window.open("cart.html");
-              
-
+      
+           // window.open("cart.html");       
 
         }
         else {
