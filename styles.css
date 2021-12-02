@@ -157,3 +157,16 @@ footer {
     margin-left: 0.4em;
     font-size: 1.2em;
   }
+
+footer > a {
+    display:none;
+}
+
+footer > button {
+    display:none;
+}
+
+#totalCart {
+    display:none;
+}
+  

@@ -2,7 +2,20 @@
 (function(){
 
     const allPotionsItems = document.querySelectorAll('.potions')
+    const footerButton = document.querySelector('footer>button')
+    const aTagToCart = document.querySelector('footer>a')
 
+
+
+    if(localStorage.length > 0) {
+        let itemsInCart = JSON.parse(localStorage.cartContent)
+        console.log(itemsInCart)
+
+        if (itemsInCart.addedProducts.length > 2) {
+            aTagToCart.style.display = 'block';
+        }
+    }
+     
 
 // lists all of the products in the initial page
 for (let i=0; i<allPotions.length; i++) {
@@ -78,8 +91,6 @@ coldButton.addEventListener('click', event => {
     const cartArea = document.querySelector('#cartList')
 
     const footer = document.querySelector('footer')
-    const footerButton = document.querySelector('footer>button')
-   
 
     const addsubstractUl = document.createElement('ul')
     addsubstractUl.classList.add('flex')
@@ -116,8 +127,11 @@ coldButton.addEventListener('click', event => {
 
         headerNav.style.display = 'none'
         productSection.style.display = 'none';
+        totalCart.style.display = 'block';
+        footerButton.style.display = 'block';
         cartAside.style.display = 'block';
-        footerButton.innerText = 'Add to Cart (0)'
+        aTagToCart.style.display = 'none';
+        footerButton.innerText = 'Add to Cart (0)';
 
         
 
@@ -208,8 +222,13 @@ coldButton.addEventListener('click', event => {
 
     let qty; 
 // this is the add to cart functionality
+//const addToCartButton = document.getElementById('addToCart')
+
+//console.log(addToCartButton)
+
     footerButton.addEventListener('click', event => {
 
+       
         if(total > 0) {
             qty = total / allPotions[id].price;
 
@@ -233,8 +252,12 @@ coldButton.addEventListener('click', event => {
                 console.log(JSON.parse(localStorage.getItem('cartContent')))
 
             }
-      
-           // window.open("cart.html");       
+            
+            // footerButton.innerText = 'View Cart'
+            // footerButton.classList.add('viewCart')
+            footerButton.style.display = 'none'
+            window.open("index.html", "_self"); 
+
 
         }
         else {
@@ -242,7 +265,19 @@ coldButton.addEventListener('click', event => {
         }
 
 
+
     })
+
+
+    // footerButton.addEventListener('click', event => {
+
+    //     if (footerButton.innerText === 'View Cart') {
+    //         window.open('cart.html', '_self');
+    //     }
+
+    // })
+
+
 
 
 })();
