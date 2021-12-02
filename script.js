@@ -94,6 +94,9 @@ coldButton.addEventListener('click', event => {
     itagRemoveButton.classList.add('material-icons')
     itagRemoveButton.innerText = 'remove'
 
+    const itemsQuantity = document.createElement('li')
+    itemsQuantity.classList.add('itemsQty')
+
     let totalCart = document.createElement('span')
     totalCart.setAttribute('id', 'totalCart')
     totalCart.style.color = 'white'
@@ -107,6 +110,7 @@ coldButton.addEventListener('click', event => {
     footer.append(totalCart)   
 
     let id;
+    let counter = 0;
 
     productSection.addEventListener('click', event => {
 
@@ -127,11 +131,14 @@ coldButton.addEventListener('click', event => {
 
         itemDescription.innerText = `${allPotions[id].description}`
 
+        itemsQuantity.innerText = counter;
+
        
         addButton.append(itagAddButton)
         substractButton.append(itagRemoveButton)
         
         addsubstractUl.append(addButton)
+        addsubstractUl.append(itemsQuantity)
         addsubstractUl.append(substractButton)
 
         listItem.classList.add('addToCart')
@@ -163,6 +170,8 @@ coldButton.addEventListener('click', event => {
         if (total >= 0) {
         totalCart.innerText = `Total: $ ${total}.00`
         footerButton.innerText = `Add to Cart (${total / allPotions[id].price})`
+        counter++;
+        itemsQuantity.innerText = counter;
        
         } 
         else {
@@ -183,6 +192,8 @@ coldButton.addEventListener('click', event => {
         if (total >= 0) {
         totalCart.innerText = `Total: $ ${total}.00`
         footerButton.innerText = `Add to Cart (${total / allPotions[id].price})`
+        counter--;
+        itemsQuantity.innerText = counter;
        
         }
         else {
