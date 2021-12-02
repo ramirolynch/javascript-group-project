@@ -6,6 +6,7 @@ const card = document.querySelector("#card")
 const cardInfoForm = document.querySelector("#card-information")
 
 
+cardInfoForm.style.display= "none"
 
 cash.addEventListener('click', function(){
     cardInfoForm.style.display = "none"

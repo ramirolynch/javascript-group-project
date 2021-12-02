@@ -6,12 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="payment.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h2>Checkout</h2>
+        <div id="page-info">
+        <h1>Checkout</h1>
         <a href="index.html">X</a> <!-- link to main page -->
+        </div>
+        <div id="shop-info">
+            <h2>Magic Potion Shop</h2>
+            <p>123 Main St, Grand Rapids, MI</p>
+        </div>
     </header>
+
     <main>
         <h3>Customer Information</h3>
         <form id = "customer-information">
@@ -26,12 +36,12 @@
         </form>
         <h3>Payment Method</h3>
         <form id="cash-or-card">
-            <input type="radio" name="payment" value="cash" id="cash"> 
+            <input type="radio" name="payment" value="cash" id="cash" class= "payment-type"> 
             <label for="cash">Pay with cash</label>
-            <input type="radio" name="payment" value="card" id="card"> 
+            <input type="radio" name="payment" value="card" id="card" class= "payment-type"> 
             <label for="card">Pay with card</label>
         </form>
-        <p>test words for radio toggle</p>
+    
         <form id= "card-information">
             <label for="card-number">Card Number</label>
             <input id="card-number" type="tel" pattern="\d*" maxlength="19" placeholder="xxxx xxxx xxxx xxxx">
@@ -48,12 +58,13 @@
                 <li>sample cart item 1 placeholder </li>
                 <li>sample cart item 2 placeholder </li>
             </ul>
+            <span>Total $ ___ </span>
         </section>
-    </main>
-    <footer>
-        <span>Total $ ___ </span>
+        
         <p>The information you provide will be processed pursuant to The Magic Potion Shop Terms of Service and Privacy Statement
         </p>
+    </main>
+    <footer>
         <button id= "pay-now-button" onclick="window.location.href='ordercomplete.html';">Pay Now</button>
         <!--fix this button later to add verification functionality if we reach stretch goal-->
     </footer>
