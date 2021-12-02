@@ -25,10 +25,13 @@
             <input type="tel" id="phone-number" name="phone-number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" maxlength="12" placeholder="xxx-xxx-xxxx">
         </form>
         <h3>Payment Method</h3>
-        <input type="radio" id="cash" name="payment" value="cash">
-        <label for="cash"> Pay with cash </label><br>
-        <input type="radio" id="card" name="payment" value="card">
-        <label for="card"> Pay with card </label><br>
+        <form id="cash-or-card">
+            <input type="radio" name="payment" value="cash" id="cash"> 
+            <label for="cash">Pay with cash</label>
+            <input type="radio" name="payment" value="card" id="card"> 
+            <label for="card">Pay with card</label>
+        </form>
+        <p>test words for radio toggle</p>
         <form id= "card-information">
             <label for="card-number">Card Number</label>
             <input id="card-number" type="tel" pattern="\d*" maxlength="19" placeholder="xxxx xxxx xxxx xxxx">
@@ -49,7 +52,8 @@
     </main>
     <footer>
         <span>Total $ ___ </span>
-        <p> terms of service legal-ese placeholder</p>
+        <p>The information you provide will be processed pursuant to The Magic Potion Shop Terms of Service and Privacy Statement
+        </p>
         <button id= "pay-now-button" onclick="window.location.href='ordercomplete.html';">Pay Now</button>
         <!--fix this button later to add verification functionality if we reach stretch goal-->
     </footer>
