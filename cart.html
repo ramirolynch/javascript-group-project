@@ -43,7 +43,7 @@
             left: 0;  
         }
 
-        #subtotal {
+        #subtotal-div {
             padding: 24px 20px;
         }
 
@@ -74,6 +74,13 @@
             border: 2px solid blueviolet;
         } */
 
+        .cart-buttons {
+            background-color: transparent;
+            border: none;
+            color: blueviolet;
+            display:block;
+        }
+
     </style>
 </head>
 <body>
@@ -85,14 +92,23 @@
 </header>
 
 <main id='cart-tbl'>
+    <!-- <table style= "width:100%">
+        
+        <tr>
+          <td>Jill</td>
+          <td>Smith</td>
+          <td>50</td>
+        </tr>
+       
+      </table> -->
     
 </main>
 
 <footer>
-    <div id="subtotal">
-        Subtotal <span>$</span>
+    <div id="subtotal-div">
+        Subtotal <span id="subtotal">$</span>
         <br>
-        Tax <span>$</span>
+        Tax <span id="tax">$</span>
     </div>
 
     <div id="footer">
