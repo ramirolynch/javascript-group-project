@@ -26,7 +26,7 @@
               let removeButton = document.createElement("button")
               let addIcon = document.createElement("i")
               let removeIcon = document.createElement("i")
-              let lineBreak = document.createElement("br")
+              let lineBreak = document.createElement("span")
       
               
     
@@ -57,7 +57,7 @@
                 cell1.setAttribute("class" , "cart-tbl")
 
                 cell2.style.height = "50px"
-                cell2.innerText= `${element.quanity}`
+                cell2.innerText= `${element.quantity}`
                 cell2.setAttribute("class" , "cart-tbl") 
 
                 cell3.style.height = "50px"
