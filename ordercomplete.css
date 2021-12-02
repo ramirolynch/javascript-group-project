@@ -8,8 +8,7 @@ body{
 
 header{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
 }
 main{
@@ -22,20 +21,9 @@ footer{
     flex-direction: column;
 }
 
-form{
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-}
-
-/* #card-information{
-  display: none;
-}
-*/
 
 
-
-#pay-now-button{
+#place-new-order{
     background-color: blueviolet;
     color:whitesmoke;
     width: 200px;
