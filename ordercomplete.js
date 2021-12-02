@@ -5,5 +5,7 @@
     
     let userName = customerName.value
     thankYou.innerText = `${userName}`
+
+    //look into session storage on local storage
     
       })();
