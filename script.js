@@ -232,7 +232,7 @@ coldButton.addEventListener('click', event => {
         if(total > 0) {
             qty = total / allPotions[id].price;
 
-            let addProductToCart = { name: allPotions[id].name, price: allPotions[id].price, quantity: qty};
+            let addProductToCart = { name: allPotions[id].name, price: allPotions[id].price, quantity: qty, idNumber:allPotions[id].idNumber};
             
 
             if (localStorage.length > 0) {
