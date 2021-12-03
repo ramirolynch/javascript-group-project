@@ -62,6 +62,7 @@ const allPotions = [
         price: 5, 
         category: 'Cold' ,
         description: 'Extends ones life indefinitely',
+        idNumber: 3
 
     },
     ]
@@ -73,12 +74,14 @@ const allPotions = [
                 //details about the product
                 name: "SAMPLE POTION 1", //You could denormalize this data, and store name and price, or pull that by sku from the menu
                 price: 5,
-                quantity: 2
+                quantity: 2,
+                idNumber: 0
             },
             {
                 //details about the product
                 name: "SAMPLE POTION 2",
                 price: 3,
-                quantity: 2
+                quantity: 2,
+                idNumber: 1
             }
         ]}

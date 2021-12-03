@@ -16,13 +16,14 @@
 
 
     
-     cartArray.forEach((element) => {
+     cartArray.forEach((element , index) => {
+      
         
         
             // for (let r = 0; r < cartArray.length; r++) {
              
               let row = document.createElement("tr")
-              let editButton = document.createElement("button")
+          
               let removeButton = document.createElement("button")
               let addIcon = document.createElement("i")
               let removeIcon = document.createElement("i")
@@ -40,11 +41,10 @@
               removeIcon.style.fontSize = "13px"
 
 
-              editButton.innerText = "edit"
-              editButton.setAttribute("class" ,"cart-buttons")
-              editButton.style.align
+             
               removeButton.innerText = "remove"
               removeButton.setAttribute("class" ,"cart-buttons")
+              removeButton.setAttribute("id" , element.idNumber)
               
           
              
@@ -57,7 +57,7 @@
                 cell1.setAttribute("class" , "cart-tbl")
 
                 cell2.style.height = "50px"
-                cell2.innerText= `${element.quanity}`
+                cell2.innerText= `${element.quantity}`
                 cell2.setAttribute("class" , "cart-tbl") 
 
                 cell3.style.height = "50px"
@@ -70,25 +70,38 @@
                 row.appendChild(cell1);
                 row.appendChild(cell2);
                 row.appendChild(cell3);
-                editButton.append(lineBreak)
+              
                 tblBody.appendChild(row);
                 tbl.appendChild(tblBody);
                 cartTable.appendChild(tbl)
-                row.appendChild(editButton)
+
                 row.appendChild(removeButton)
-                editButton.appendChild(addIcon)
-                editButton.appendChild(removeIcon)
+                
 
-                removeButton.addEventListener("click" , event => {
-                  console.log(event)
-            
-                })
+               
 
-                let cartTotal = 0
+                // let cartTotal = 0
 
                 
             
 
+              })
+
+              document.body.addEventListener("click" , event => {
+                console.log(event.target.id)
+
+                for (let i=0; i<cartArray.length; i++) {
+                  if (event.target.id === i ) {
+                    console.log("hello")
+                    cartArray.splice(i, 1)
+                    localStorage.setItem('cartContent', JSON.stringify(cartArray));
+                    
+                  }
+                  
+                }
+                 
+                console.log(cartArray)  
+          
               })
 
     
