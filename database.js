@@ -4,12 +4,14 @@ const allPotions = [
         price:4,
         category: 'Cold',
         description: 'Relieves anxiety and agitation',
+        idNumber:0,
     },
     {
         name: 'Amortentia',
         price: 3,
         category: 'Hot',
         description: 'Induces an intense artificial love',
+        idNumber:1,
 
     },
     {
@@ -17,12 +19,14 @@ const allPotions = [
         price:5,
         category: 'Cold',
         description: 'Makes one temporarily attractive',
+        idNumber:2,
     },
     {
         name: 'Wolfsbane Potion',
         price: 5,
         category: 'Hot',
         description: 'Relieves the effects of lycanthropy',
+        idNumber:3,
 
     },
     {
@@ -30,12 +34,14 @@ const allPotions = [
         price:4,
         category: 'Cold',
         description: 'Causes lost bones to regrow',
+        idNumber:4,
     },
     {
         name: 'Invisibility Potion',
         price: 3,
         category: 'Hot',
         description: 'Renders one temporarily invisible',
+        idNumber:5,
 
     },
     {
@@ -43,18 +49,21 @@ const allPotions = [
         price:5,
         category: 'Cold',
         description: 'Forces the user to tell the truth when questioned',
+        idNumber:6,
     },
     {
         name: 'Polyjuice Potion',
         price: 5,
         category: 'Hot',
         description: 'Changes appearance to match the hairs bearer',
+        idNumber:7,
     },
     {
         name: 'Felix Felicis',
         price:5,
         category: 'Cold',
         description: 'Temporarily grants the recipient luck',
+        idNumber:8,
     
     },
     {
@@ -62,7 +71,7 @@ const allPotions = [
         price: 5, 
         category: 'Cold' ,
         description: 'Extends ones life indefinitely',
-        idNumber: 3
+        idNumber: 9,
 
     },
     ]
@@ -75,13 +84,13 @@ const allPotions = [
                 name: "SAMPLE POTION 1", //You could denormalize this data, and store name and price, or pull that by sku from the menu
                 price: 5,
                 quantity: 2,
-                idNumber: 0
+                idNumber: 10,
             },
             {
                 //details about the product
                 name: "SAMPLE POTION 2",
                 price: 3,
                 quantity: 2,
-                idNumber: 1
+                idNumber: 11,
             }
         ]}
