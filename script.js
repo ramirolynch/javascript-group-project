@@ -4,6 +4,7 @@
     const allPotionsItems = document.querySelectorAll('.potions')
     const footerButton = document.querySelector('footer>button')
     const aTagToCart = document.querySelector('footer>a')
+    const closeIcon = document.querySelector('header>a')
 
 
 
@@ -130,6 +131,7 @@ coldButton.addEventListener('click', event => {
         totalCart.style.display = 'block';
         footerButton.style.display = 'block';
         cartAside.style.display = 'block';
+        closeIcon.style.display = 'block';
         aTagToCart.style.display = 'none';
         footerButton.innerText = 'Add to Cart (0)';
 
@@ -276,6 +278,10 @@ coldButton.addEventListener('click', event => {
     //     }
 
     // })
+
+    closeIcon.addEventListener('click', event => {
+        window.open("index.html", "_self");
+    });
 
 
 
