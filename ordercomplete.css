@@ -1,6 +1,6 @@
 body{
     background-color: whitesmoke;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Merriweather', serif;
     color: black;
     display: flex;
     flex-direction: column;
@@ -29,4 +29,5 @@ footer{
     width: 200px;
     height: 50px;
     border-radius: 10%;
+    font-family: 'Merriweather', serif;
 }
