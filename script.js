@@ -159,9 +159,9 @@ allButton.addEventListener('click', event => {
         addButton.append(itagAddButton)
         substractButton.append(itagRemoveButton)
         
-        addsubstractUl.append(addButton)
-        addsubstractUl.append(itemsQuantity)
         addsubstractUl.append(substractButton)
+        addsubstractUl.append(itemsQuantity)
+        addsubstractUl.append(addButton)
 
         listItem.classList.add('addToCart')
 
