@@ -164,6 +164,7 @@ footer > a {
 
 footer > button {
     display:none;
+    border-radius: 0.5em;
 }
 
 #totalCart {
