@@ -52,7 +52,7 @@ ul {
 
 #products > li {
     margin:0;
-    height:50px;
+    height:40px;
     display:flex;
     align-items: end;
     border-bottom: 0.2em solid blueviolet;
