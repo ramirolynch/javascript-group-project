@@ -5,7 +5,7 @@
     const footerButton = document.querySelector('footer>button')
     const aTagToCart = document.querySelector('footer>a')
     const closeIcon = document.querySelector('header>a')
-
+    const navUl = document.querySelector('nav>ul')
 
 
     if(localStorage.length > 0) {
@@ -29,6 +29,7 @@ for (let i=0; i<allPotions.length; i++) {
 // getting category buttons
 const hotButton = document.querySelector('nav>ul>li:nth-child(1)');
 const coldButton = document.querySelector('nav>ul>li:nth-child(2)');
+const allButton = document.querySelector('#all')
   
     // hot button category functionality
     hotButton.addEventListener('click', event => {
@@ -82,6 +83,11 @@ coldButton.addEventListener('click', event => {
 }
 
 })
+
+allButton.addEventListener('click', event => {
+    window.open('index.html', '_self')
+})
+
 
 // this is the pop up functionality
 
@@ -282,6 +288,7 @@ coldButton.addEventListener('click', event => {
     closeIcon.addEventListener('click', event => {
         window.open("index.html", "_self");
     });
+
 
 
 
