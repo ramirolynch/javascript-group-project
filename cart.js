@@ -68,16 +68,9 @@
 
                console.log(element)
                 let cartTotal = 0
-                let taxes = 0
-                // let subtotalCart = ` $${element.price * element.quantity}`;
-                // let taxesCart = parseInt(subtotalCart) * 0.06
-                // let realCartTotal = parseInt(subtotalCart + taxesCart)
-
               
-
-                cartSubtotal.innerText = ` $${element.price * element.quantity}`;
+                cartSubtotal.innerText = `$${element.price * element.quantity}`;
               
-
                 cartTax.innerText =  parseInt(cartSubtotal.innerText * 0.06)
               
                 cartTotal += cartSubtotal + cartTax
