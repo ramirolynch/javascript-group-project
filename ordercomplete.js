@@ -26,7 +26,7 @@
     customerCart.append(cartItems);
 
     checkoutTotal += cartArray[i].price * cartArray[i].quantity;
-    summaryTotal.innerText = `Total $${checkoutTotal}`
+    summaryTotal.innerText = `Total: $${checkoutTotal}`
     summarySection.append(summaryTotal)
 
   };

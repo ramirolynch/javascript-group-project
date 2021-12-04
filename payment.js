@@ -6,6 +6,9 @@ const card = document.querySelector("#card")
 const cardInfoForm = document.querySelector("#card-information")
 const cashForm = document.querySelector("#cash-amount")
 
+
+// show/hide cash or card forms
+
 cardInfoForm.style.display= "none"
 
 cashForm.style.display= "none"
@@ -21,6 +24,9 @@ card.addEventListener('click', function(){
   cashForm.style.display = "none"
 });
 
+
+
+// order summary from local storage cart
 
 let customerCart = document.querySelector("section > ul");
 
@@ -38,11 +44,25 @@ for (let i=0; i<cartArray.length; i++) {
   customerCart.append(cartItems);
 
   checkoutTotal += cartArray[i].price * cartArray[i].quantity;
-  summaryTotal.innerText = `Total $${checkoutTotal}`
+  summaryTotal.innerText = `Total: $${checkoutTotal}`
   summarySection.append(summaryTotal)
 
 
 };
+
+// change back calculator
+
+document.getElementById("cash-input").addEventListener("change", function(){
+  let cashGiven = parseFloat(document.getElementById("cash-input").value);
+  let changeBack = document.querySelector("#change-back");
+
+  let changeTotal = cashGiven - checkoutTotal;
+
+  changeBack.innerText = `$${changeTotal.toFixed(2)}`;
+
+});
+
+
 
 
 
