@@ -153,9 +153,9 @@ footer {
 
   .itemsQty {
     color: blueviolet;
-    padding-top: 0.1em;
+
     margin-left: 0.4em;
-    font-size: 1.2em;
+    font-size: 1em;
   }
 
 footer > a {
