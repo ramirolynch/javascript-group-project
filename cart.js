@@ -66,15 +66,12 @@
                 row.appendChild(removeButton)
                 
 
-               console.log(element)
-                let cartTotal = 0
+              //  console.log(element)
+                // let cartTotal = 0
               
-                cartSubtotal.innerText = `$${element.price * element.quantity}`;
+                // cartSubtotal.innerText = `$${element.price * element.quantity}`;
               
-                cartTax.innerText =  parseInt(cartSubtotal.innerText * 0.06)
               
-                cartTotal += cartSubtotal + cartTax
-                cartTotalFooter.innerText = parseInt(cartTotal)
                
                  
                 
@@ -103,12 +100,26 @@
           
               })
 
-    
-              // for (let i=0; i<cartArray.length; i++) {
-              //   console.log(cartArray[i])
+              let tempSubtotal = 0
+              let cartTotal = 0
 
-              //   cartSubtotal.innerText = cartArray[i].quantity * cartArray[i].price
-              // }
+
+
+              for (let i=0; i<cartArray.length; i++) {
+                console.log(cartArray[i])
+
+                tempSubtotal += cartArray[i].quantity * cartArray[i].price
+               
+              }
+
+              cartSubtotal.innerText = tempSubtotal
+
+              cartTax.innerText =  parseFloat(cartSubtotal.innerText * 0.06)
+              
+              cartTotal += parseFloat(cartSubtotal.innerText * 0.06) +tempSubtotal
+              cartTotalFooter.innerText = cartTotal
+
+
 
     
 
