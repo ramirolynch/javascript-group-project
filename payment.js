@@ -7,6 +7,8 @@ const cardInfoForm = document.querySelector("#card-information");
 const cashForm = document.querySelector("#cash-amount");
 
 
+
+
 // show/hide cash or card forms
 
 cardInfoForm.style.display= "none";
@@ -67,6 +69,22 @@ document.getElementById("cash-input").addEventListener("change", function(){
   }
 
 });
+
+cashForm.addEventListener("submit", event => {
+
+  event.preventDefault()
+
+})
+
+const payNow = document.querySelector("#pay-now-button")
+
+payNow.addEventListener("click", function(){
+
+  window.open("ordercomplete.html", "_self");
+
+})
+
+
 
 //create if statement that triggers a message if not enough cash is given prompting more
 //disable pay button?
