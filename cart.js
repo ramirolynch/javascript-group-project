@@ -6,6 +6,9 @@
     let tbl = document.createElement("table");
     tbl.style.width = "100%"
     let tblBody = document.createElement("tbody");
+    const cartSubtotal = document.getElementById("subtotal")
+    const cartTax = document.getElementById("tax")
+    const cartTotalFooter = document.getElementById("cartTotal")
     
     // console.log(cartArray)
     // for (var x in cartArray) {
@@ -18,32 +21,17 @@
     
      cartArray.forEach((element , index) => {
       
-        
-        
-            // for (let r = 0; r < cartArray.length; r++) {
              
               let row = document.createElement("tr")
           
               let removeButton = document.createElement("button")
-              let addIcon = document.createElement("i")
-              let removeIcon = document.createElement("i")
-              let lineBreak = document.createElement("br")
-      
               
-    
-            
-             
-              addIcon.setAttribute("class" ,"material-icons")
-              addIcon.innerText = "add_circle"
-              addIcon.style.fontSize = "13px"
-              removeIcon.setAttribute("class" ,"material-icons")
-              removeIcon.innerText = "remove_circle"
-              removeIcon.style.fontSize = "13px"
-
-
-             
-              removeButton.innerText = "remove"
-              removeButton.setAttribute("class" ,"cart-buttons")
+              removeButton.setAttribute("class" ,"material-icons")
+              removeButton.innerText = "delete"
+              removeButton.style.fontSize = "20px"
+              removeButton.style.backgroundColor = "transparent"
+              removeButton.style.border = "none"
+              removeButton.style.color = "blueviolet"
               removeButton.setAttribute("id" , element.idNumber)
               
           
@@ -53,11 +41,11 @@
                 let cell2 = document.createElement("td");
                 let cell3 = document.createElement("td");
                 cell1.style.height = "50px"
-                cell1.innerText= `${element.name} `
+                cell1.innerText= `${element.quantity}`
                 cell1.setAttribute("class" , "cart-tbl")
 
                 cell2.style.height = "50px"
-                cell2.innerText= `${element.quantity}`
+                cell2.innerText= `${element.name} `
                 cell2.setAttribute("class" , "cart-tbl") 
 
                 cell3.style.height = "50px"
@@ -79,8 +67,26 @@
                 
 
                
+                let cartTotal = 0
+                let taxes = 0
+                // let subtotalCart = ` $${element.price * element.quantity}`;
+                // let taxesCart = parseInt(subtotalCart) * 0.06
+                // let realCartTotal = parseInt(subtotalCart + taxesCart)
 
-                // let cartTotal = 0
+              
+
+                // cartSubtotal.innerText = ` $${element.price * element.quantity}`;
+              
+
+                // cartTax.innerText =  parseInt(cartSubtotal.innerText * 0.06)
+              
+                // cartTotal += cartSubtotal + cartTax
+                // cartTotalFooter.innerText = parseInt(cartTotal)
+               
+                 
+                
+                
+              
 
                 
             
@@ -88,7 +94,7 @@
               })
 
               document.body.addEventListener("click" , event => {
-                console.log(event.target.id)
+                // console.log(event.target.id)
 
                 for (let i=0; i<cartArray.length; i++) {
                   if (event.target.id === i ) {
@@ -105,6 +111,11 @@
               })
 
     
+              for (let i=0; i<cartArray.length; i++) {
+                console.log(cartArray[i])
+
+                cartSubtotal.innerText = cartArray[i].quantity * cartArray[i].price
+              }
 
     
 
