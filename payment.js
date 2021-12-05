@@ -70,12 +70,14 @@ document.getElementById("cash-input").addEventListener("change", function(){
 
 });
 
+// stop enter from reloading page on cash input
 cashForm.addEventListener("submit", event => {
 
   event.preventDefault()
 
 })
 
+// 
 const payNow = document.querySelector("#pay-now-button")
 
 payNow.addEventListener("click", function(){
@@ -86,10 +88,7 @@ payNow.addEventListener("click", function(){
 
 
 
-//create if statement that triggers a message if not enough cash is given prompting more
-//disable pay button?
-//optional new input pop up that adds more to amount already given, but this gets complicated
-// without that "not enough, please try again" could potentially suffice
+
 
 
 
