@@ -4,6 +4,8 @@ body{
     color: black;
     display: flex;
     flex-direction: column;
+    height: 100vh;
+    width: 100%;
 }
 
 img{
@@ -116,4 +118,25 @@ footer {
     /* Support for IE. */
     font-feature-settings: 'liga';
   }
+
+  @media screen and (min-width: 769px) {
+    body{
+        padding-left: 15%;
+        padding-right: 15%;
+        width: 75%;
+        background-color: white;
+    }
+    header{
+        background-color: whitesmoke;
+    }
+    main{
+        background-color: whitesmoke;
+    }
+
+    footer{
+    position: relative;
+
+    
+    }
+}
 
