@@ -8,14 +8,7 @@
     const navUl = document.querySelector('nav>ul')
 
 
-    if(localStorage.length > 0) {
-        let itemsInCart = JSON.parse(localStorage.cartContent)
-        console.log(itemsInCart)
 
-        if (itemsInCart.addedProducts.length > 2) {
-            aTagToCart.style.display = 'block';
-        }
-    }
      
 
 // lists all of the products in the initial page
@@ -159,9 +152,9 @@ allButton.addEventListener('click', event => {
         addButton.append(itagAddButton)
         substractButton.append(itagRemoveButton)
         
-        addsubstractUl.append(addButton)
-        addsubstractUl.append(itemsQuantity)
         addsubstractUl.append(substractButton)
+        addsubstractUl.append(itemsQuantity)
+        addsubstractUl.append(addButton)
 
         listItem.classList.add('addToCart')
 
@@ -246,7 +239,7 @@ allButton.addEventListener('click', event => {
             if (localStorage.length > 0) {
                 // do this if localStorage already exists
                 let storedItems = JSON.parse(localStorage.cartContent);
-                storedItems.addedProducts.push(addProductToCart)
+                storedItems.push(addProductToCart)
 
                 let itemsString = JSON.stringify(storedItems)
                 localStorage.setItem('cartContent', itemsString)

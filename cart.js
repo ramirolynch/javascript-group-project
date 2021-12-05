@@ -1,7 +1,7 @@
 (function(){
     
     let cartProducts = JSON.parse(localStorage.getItem("cartContent"));
-    let cartArray = cartProducts.addedProducts
+    let cartArray = cartProducts // ramiro note: I had to change this line
     let cartTable = document.querySelector("main")
     let tbl = document.createElement("table");
     tbl.style.width = "100%"
@@ -100,6 +100,31 @@
               cartTotal += parseFloat(cartSubtotal.innerText * 0.06) +tempSubtotal
 
               cartTotalFooter.innerText = `$${cartTotal}`
+
+// ramiro added this 
+    document.body.addEventListener('click', event => {
+
+      for(let i=0; i<cartArray.length; i++) {
+      
+        if(parseInt(event.target.id) === cartArray[i].idNumber) {
+
+          cartArray.splice(cartArray[i], 1)
+         
+          localStorage.setItem('cartContent', JSON.stringify(cartArray))
+          break;
+        }
+      }
+
+    event.target.parentNode.remove();
+    })
+// end of ramiro's addition
+
+
+             
+
+              
+
+        // productsInCart.innerText = cartArray[i].name
        
 
 

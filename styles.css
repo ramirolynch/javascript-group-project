@@ -159,7 +159,7 @@ footer {
   }
 
 footer > a {
-    display:none;
+    /* display:none; */
 }
 
 footer > button {

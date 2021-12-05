@@ -17,7 +17,7 @@
 
   let checkoutTotal = 0;
 
-  console.log(cartProducts)
+
 
   for (let i=0; i<cartArray.length; i++) {
 
@@ -30,5 +30,16 @@
     summarySection.append(summaryTotal)
 
   };
+
+  const newOrder = document.querySelector("#place-new-order")
+
+newOrder.addEventListener("click", function(){
+
+  window.open("index.html", "_self");
+
+  localStorage.clear();
+
+
+})
     
 })();

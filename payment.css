@@ -6,6 +6,10 @@ body{
     flex-direction: column;
 }
 
+img{
+    width: 100px;
+}
+
 #page-info{
     display: flex;
     flex-direction: row;
