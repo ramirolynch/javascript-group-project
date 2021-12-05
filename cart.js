@@ -67,22 +67,6 @@
               })
             }
 
-              document.body.addEventListener("click" , event => {
-                // console.log(event.target.id)
-
-                for (let i=0; i<cartArray.length; i++) {
-                  if (event.target.id === i ) {
-                    console.log("hello")
-                    cartArray.splice(i, 1)
-                    localStorage.setItem('cartContent', JSON.stringify(cartArray));
-                    
-                  }
-                  
-                }
-                 
-                // console.log(cartArray)  
-          
-              })
 
               let tempSubtotal = 0
               let cartTotal = 0
@@ -128,7 +112,7 @@
 
               
 
-        // productsInCart.innerText = cartArray[i].name
+
        
 
 
