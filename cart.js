@@ -12,7 +12,9 @@
     
 
 
-    
+     if (localStorage.length > 0) {
+
+     
      cartArray.forEach((element , index) => {
       
              
@@ -63,6 +65,7 @@
 
 
               })
+            }
 
               document.body.addEventListener("click" , event => {
                 // console.log(event.target.id)
@@ -85,13 +88,14 @@
               let cartTotal = 0
 
 
-
+              if (localStorage.length > 0) {
               for (let i=0; i<cartArray.length; i++) {
                 console.log(cartArray[i])
 
                 tempSubtotal += cartArray[i].quantity * cartArray[i].price
                
               }
+            }
 
               cartSubtotal.innerText = tempSubtotal + ".00"
 
