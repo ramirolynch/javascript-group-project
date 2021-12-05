@@ -178,3 +178,7 @@ header > a {
     margin: 0.5em;
     display:none;
 }
+
+header > img {
+    width:100px;
+}
