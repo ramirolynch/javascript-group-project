@@ -13,17 +13,24 @@
     <style>
         body{
             height: 100vh;
-            font-family: merriweather;
+            font-family: 'merriweather', serif;
+            background-color: whitesmoke;
         }
         header{
             display: flex;
-            justify-content: space-between;
+            justify-content: center
         }
 
         #close {
-            font-size: larger;
+            
             text-decoration: none;
-            font-weight: 600;
+            position:fixed;
+            top:0;
+            right:0;
+            margin: 0.5em;
+            color: whitesmoke;
+            background-color: blueviolet;
+            border-radius: 50%;
         }
 
         a:hover {
@@ -52,11 +59,9 @@
         }
 
         #footer{
-            height: 50px;
+            height: 30px;
             color: cornsilk;
-            padding-left: 20px;
-            padding-right: 20px;
-            padding-top: 20px;
+            padding: 10px;
             font-weight: 700;
             display: flex;
     
@@ -74,9 +79,6 @@
             font-weight: 700;
         }
 
-        /* .cart-tbl {
-            border: 2px solid blueviolet;
-        } */
 
         .cart-buttons {
             background-color: transparent;
@@ -96,20 +98,13 @@
     
 <header>
     <h2> Your Order </h2>
-    <a id="close" href="index.html">x</a>
+    <a id="close" href="index.html"><i class="material-icons"> close </i></a>
+    
 
 </header>
 
 <main id='cart-tbl'>
-    <!-- <table style= "width:100%">
-        
-        <tr>
-          <td>Jill</td>
-          <td>Smith</td>
-          <td>50</td>
-        </tr>
-       
-      </table> -->
+  
     
 </main>
 
@@ -117,7 +112,7 @@
     <div id="subtotal-div">
         Subtotal <span id="subtotal">$</span>
         <br>
-        Tax <span id="tax">$</span>
+        Tax <span id="tax">$</span> 
     </div>
 
     <div id="footer">
