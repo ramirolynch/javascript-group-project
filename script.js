@@ -239,7 +239,8 @@ allButton.addEventListener('click', event => {
             if (localStorage.length > 0) {
                 // do this if localStorage already exists
                 let storedItems = JSON.parse(localStorage.cartContent);
-                storedItems.push(addProductToCart)
+                
+                storedItems.addedProducts.push(addProductToCart)
 
                 let itemsString = JSON.stringify(storedItems)
                 localStorage.setItem('cartContent', itemsString)
