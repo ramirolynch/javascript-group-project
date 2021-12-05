@@ -10,17 +10,28 @@ img{
     width: 100px;
 }
 
-#page-info{
+header{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
+    
 }
+
 #shop-info{
     display: flex;
     flex-direction: column;
-    align-items:flex-start;
+    align-items:center;
 }
+
+#back-to-main{
+    text-decoration: none;
+    position:fixed;
+    top:0;
+    right:0;
+    margin: 0.5em;
+    
+}
+
 
 main{
     display: flex;
@@ -83,6 +94,8 @@ footer {
     display: inline-block;
     line-height: 1;
     margin-left:0.3em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
     text-transform: none;
     letter-spacing: normal;
     word-wrap: normal;
