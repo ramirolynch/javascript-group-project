@@ -33,7 +33,7 @@ card.addEventListener('click', function(){
 let customerCart = document.querySelector("section > ul");
 
 let cartProducts = JSON.parse(localStorage.getItem("cartContent"));
-let cartArray = cartProducts
+let cartArray = cartProducts.addedProducts
 let summaryTotal = document.querySelector("section > span");
 let summarySection = document.querySelector("section");
 
