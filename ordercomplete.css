@@ -4,16 +4,35 @@ body{
     color: black;
     display: flex;
     flex-direction: column;
+    height: 100vh;
+    width: 100%;
 }
-
+h1{
+    font-size: 25px;
+    margin-bottom: 5px
+}
+h2{
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+h3{
+    font-size: 20px;
+}
+p{
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+img{
+    width: 100px;
+    padding-top: 5px
+}
 header{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 10px;
 }
-img{
-    width: 100px;
-}
+
 #shop-info{
     display: flex;
     flex-direction: column;
@@ -23,6 +42,8 @@ img{
 main{
     display: flex;
     flex-direction: column;
+    padding-left: 1em;
+    padding-bottom: 75px;
 }
 footer{
    
@@ -32,7 +53,7 @@ footer{
         display:flex;
         justify-content: space-between;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         width:100%;
         height: 50px;
         background-color: blueviolet;
@@ -47,4 +68,29 @@ footer{
     width: 300px;
     height: 50px;
     border: none;
+}
+
+
+@media screen and (min-width: 769px) {
+
+    body{
+        padding-left: 15%;
+        padding-right: 15%;
+        width: 75%;
+        background-color: white;
+    }
+    header{
+        background-color: whitesmoke;
+    }
+    main{
+        background-color: whitesmoke;
+        
+    }
+
+    footer{
+    position: fixed;
+    margin-left:16%;
+    width: 75%;
+    }
+
 }
