@@ -227,46 +227,52 @@ allButton.addEventListener('click', event => {
 
 //console.log(addToCartButton)
 
-    footerButton.addEventListener('click', event => {
+footerButton.addEventListener('click', event => {
 
        
-        if(total > 0) {
-            qty = total / allPotions[id].price;
+   
+        qty = total / allPotions[id].price;
 
-            let addProductToCart = { name: allPotions[id].name, price: allPotions[id].price, quantity: qty, idNumber:allPotions[id].idNumber};
+        let addProductToCart = { name: allPotions[id].name, price: allPotions[id].price, quantity: qty, idNumber:allPotions[id].idNumber};
+
+        
+
+        if (localStorage.cartContent !== undefined) {
+
             
 
-            if (localStorage.length > 0) {
-                // do this if localStorage already exists
-                let storedItems = JSON.parse(localStorage.cartContent);
-                console.log(storedItems)
-                
-                storedItems.addedProducts.push(addProductToCart)
-
-                let itemsString = JSON.stringify(storedItems)
-                localStorage.setItem('cartContent', itemsString)
-
-            }
-            else {
-
-                Cart.addedProducts.push(addProductToCart)
-                const cartString = JSON.stringify(Cart)
-                localStorage.setItem('cartContent', cartString);
-                console.log(JSON.parse(localStorage.getItem('cartContent')))
-
-            }
+            let storedCartArray = JSON.parse(localStorage.cartContent);
             
-            // footerButton.innerText = 'View Cart'
-            // footerButton.classList.add('viewCart')
-            footerButton.style.display = 'none'
-            window.open("index.html", "_self"); 
+            console.log(storedCartArray)
 
+            storedCartArray.addedProducts.push(addProductToCart)
 
+            localStorage.setItem('cartContent', JSON.stringify(storedCartArray))
+
+        
+        
         }
         else {
-            console.log('you havent added items to cart');
+
+
+            Cart.addedProducts.push(addProductToCart)
+            
+            localStorage.setItem('cartContent', JSON.stringify(Cart))
+
         }
 
+
+        // storedItems.addedProducts.push(addProductToCart)
+
+        // let itemsString = JSON.stringify(storedItems)
+        // localStorage.setItem('cartContent', itemsString)
+    
+
+        
+        // footerButton.innerText = 'View Cart'
+        // footerButton.classList.add('viewCart')
+        footerButton.style.display = 'none';
+        window.open("index.html", "_self"); 
 
 
     })
