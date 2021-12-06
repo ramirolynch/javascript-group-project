@@ -241,14 +241,12 @@ footerButton.addEventListener('click', event => {
 
             
 
-            let storedCartArray = JSON.parse(localStorage.cartContent);
+            let storedCartArray = JSON.parse(localStorage.getItem('cartContent'));
             
-            console.log(storedCartArray)
 
             storedCartArray.addedProducts.push(addProductToCart)
 
             localStorage.setItem('cartContent', JSON.stringify(storedCartArray))
-
         
         
         }
