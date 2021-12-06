@@ -23,8 +23,13 @@
             align-items: center;
         }
 
+        header > p {
+            margin-block-end:0;
+            margin-block-start:0;
+}
+
+
         #close {
-            
             text-decoration: none;
             position:fixed;
             top:0;
@@ -118,23 +123,40 @@
 
         @media screen and (min-width: 769px) {
 
-    body{
-        padding-left: 15%;
-        padding-right: 15%;
+     body{
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
         width: 75%;
         background-color: white;
        
     }
+
+    h2{
+        margin: 0;
+    }
+
+    main{
+        background-color: whitesmoke;
+        height: 100vh;
+    }
     header{
         background-color: whitesmoke;
     }
-    main{
-        background-color: whitesmoke;
-    }
+   
 
     footer{
     position: relative;
+    background-color: whitesmoke;
 
+    } 
+
+    #close {
+        right:15%;
+    }
+
+    .material-icons {
+        margin-block-start: 0em;
     }
 }
     </style>
@@ -142,14 +164,16 @@
 <body>
     
 <header>
-    <h2> Your Order </h2>
+    <h1>Magic Potion Shop</h1>
+    <p>123 Main St, Grand Rapids, MI</p>
+    <p>Open 9am Closes 10 pm everyday</p>
     <a id="close" href="index.html"><i class="material-icons"> close </i></a>
     <img src="assets/black-cat.png" alt="black cat logo">
 
 </header>
 
 <main id='cart-tbl'>
-  
+    <h2> Your Order </h2>
     
 </main>
 
