@@ -14,8 +14,8 @@ button {
 main {
     display: flex;
     justify-content: space-between;
-    padding-right:1em;
-    padding-left:1em;
+    /* padding-right:1em;
+    padding-left:1em; */
 
 }
 
@@ -93,9 +93,9 @@ footer {
     display:flex;
     justify-content: space-between;
     align-items: center;
-    padding-left:1em;
+    /* padding-left:1em; */
     width:100%;
-    height: 50px;
+    height: 40px;
     background-color: blueviolet;
 }
 
@@ -190,6 +190,10 @@ header > img {
         width: 75%;
         background-color: white;
     }
+    h1 {
+    margin-block-end: 0;
+    }
+
     header{
         background-color: whitesmoke;
     }
@@ -199,7 +203,14 @@ header > img {
 
     footer{
     position: relative;
+    margin-top:1em;
 
     
+    }
+
+    header > a {
+        position:fixed;
+        right:10%;
+        display:none;
     }
 }
