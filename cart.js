@@ -1,7 +1,11 @@
 (function(){
     
     let cartProducts = JSON.parse(localStorage.getItem("cartContent"));
-    let cartArray = cartProducts.addedProducts // ramiro note: I had to change this line
+   // ramiro note: I had to change this line
+   let cartArray = [];
+    if (cartProducts != null) {
+      cartArray = cartProducts.addedProducts;
+    }
     let cartTable = document.querySelector("main")
     let tbl = document.createElement("table");
     tbl.style.width = "100%"
@@ -16,6 +20,8 @@
 
      
      cartArray.forEach((element , index) => {
+
+   
       
              
               let row = document.createElement("tr")
