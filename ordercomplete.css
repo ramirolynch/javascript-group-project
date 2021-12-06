@@ -30,7 +30,7 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-bottom: 10px;
+    padding-bottom: 10px;
 }
 
 #shop-info{
