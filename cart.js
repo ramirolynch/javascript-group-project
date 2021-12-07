@@ -127,6 +127,7 @@
       }
       
     event.target.parentNode.remove();
+    window.location.reload();
     
     })
 // end of ramiro's addition
