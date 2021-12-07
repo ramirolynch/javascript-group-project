@@ -57,6 +57,7 @@ main{
     display: flex;
     flex-direction: column;
     padding-left: 1em;
+    padding-right: 1em;
     padding-bottom: 75px;
     height: 100vh;
 }
@@ -140,7 +141,7 @@ footer {
   }
 
   @media screen and (min-width: 769px) {
-      
+
     body{
      
         margin: 0 auto;
@@ -161,7 +162,7 @@ footer {
     }
 
     #back-to-main {
-        right: 10%;
+        right: 15%;
     }
 
   
