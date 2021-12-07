@@ -115,13 +115,18 @@ allButton.addEventListener('click', event => {
     totalCart.innerText = `Total: $ 0.00`
 
     const itemDescription = document.createElement('li')
-
+    // itemDescription.style.marginBottom = '42%';
+// 
     const listItem = document.createElement('li')
 
     footer.append(totalCart)   
 
     let id;
     let counter = 0;
+
+    const mainTag = document.querySelector('main')
+
+
 
     productSection.addEventListener('click', event => {
 
@@ -133,8 +138,10 @@ allButton.addEventListener('click', event => {
         closeIcon.style.display = 'block';
         aTagToCart.style.display = 'none';
         footerButton.innerText = 'Add to Cart (0)';
+        mainTag.style.height = '57vh';
 
-        
+       // const marginBottomLi = document.querySelector('#cartList > li');
+        //marginBottomLi.style.marginBottom = '53%';
 
         console.log(itemDescription)
 
@@ -195,10 +202,7 @@ allButton.addEventListener('click', event => {
            
         }
 
-        // let addProductToCart = { name: allPotions[id].name, price: allPotions[id].price};
 
-        // Cart.addedProducts.push(addProductToCart)
-        // console.log(Cart.addedProducts[2])
 
 
     } else if (event.target.innerText === 'remove') {
@@ -222,10 +226,7 @@ allButton.addEventListener('click', event => {
     })
 
     let qty; 
-// this is the add to cart functionality
-//const addToCartButton = document.getElementById('addToCart')
 
-//console.log(addToCartButton)
 
 footerButton.addEventListener('click', event => {
 
@@ -286,6 +287,8 @@ footerButton.addEventListener('click', event => {
     closeIcon.addEventListener('click', event => {
         window.open("index.html", "_self");
     });
+
+   
 
 
 
