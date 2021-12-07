@@ -3,7 +3,7 @@
     let cartProducts = JSON.parse(localStorage.getItem("cartContent"));
    let cartArray = [];
     if (cartProducts != null) {
-      cartArray = cartProducts.addedProducts;
+      cartArray = cartProducts;
     }
     let cartTable = document.querySelector("main")
     let tbl = document.createElement("table");

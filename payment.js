@@ -42,7 +42,7 @@ let cartArray = [];
 
 
   if (cartProducts != null) {
-    cartArray = cartProducts.addedProducts;
+    cartArray = cartProducts;
   }
 
 

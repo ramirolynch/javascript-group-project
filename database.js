@@ -77,8 +77,10 @@ const allPotions = [
     ]
 
 
-    const Cart = {
-        addedProducts: [],
-    }
+    // const Cart = {
+    //     addedProducts: [],
+    // }
+
+    const Cart = [];
 
  
