@@ -115,7 +115,7 @@ allButton.addEventListener('click', event => {
     totalCart.innerText = `Total: $ 0.00`
 
     const itemDescription = document.createElement('li')
-    // itemDescription.style.marginBottom = '42%';
+
 // 
     const listItem = document.createElement('li')
 
@@ -138,7 +138,7 @@ allButton.addEventListener('click', event => {
         closeIcon.style.display = 'block';
         aTagToCart.style.display = 'none';
         footerButton.innerText = 'Add to Cart (0)';
-        mainTag.style.height = '57vh';
+       
 
        // const marginBottomLi = document.querySelector('#cartList > li');
         //marginBottomLi.style.marginBottom = '53%';
