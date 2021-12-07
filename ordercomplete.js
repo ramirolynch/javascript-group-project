@@ -12,13 +12,17 @@
 
   let cartProducts = JSON.parse(localStorage.getItem("cartContent"));
   
-  let summaryTotal = document.querySelector("section > span")
-  let summarySection = document.querySelector("section")
+  let summaryTotal = document.querySelector("#total");
+  let summaryTax = document.querySelector("#tax")
+  let summarySubtotal = document.querySelector("#subtotal")
 
+  let checkoutSubtotal = 0;
   let checkoutTotal = 0;
 
   //let cartArray = cartProducts.addedProducts;
   let cartArray = [];
+
+
   if (cartProducts != null) {
     cartArray = cartProducts;
   }
@@ -26,14 +30,16 @@
   for (let i=0; i<cartArray.length; i++) {
 
     let cartItems = document.createElement("li");
-    cartItems.innerText = `${cartArray[i].name} $${cartArray[i].price * cartArray[i].quantity}`;
-    customerCart.append(cartItems);
+  cartItems.innerText = `${cartArray[i].name} $${cartArray[i].price * cartArray[i].quantity}`;
+  customerCart.append(cartItems);
 
-    checkoutTotal += cartArray[i].price * cartArray[i].quantity;
-    summaryTotal.innerText = `Total: $${checkoutTotal}`
-    summarySection.append(summaryTotal)
-
-  };
+  checkoutSubtotal += cartArray[i].price * cartArray[i].quantity;
+  summarySubtotal.innerText = `Subtotal: $${checkoutSubtotal}.00`
+  summaryTax.innerText = "Tax: $" + (checkoutSubtotal * .06)
+  summaryTotal.innerText = "Total: $" + checkoutSubtotal + (checkoutSubtotal * .06)
+  
+  
+};
 
   const newOrder = document.querySelector("#place-new-order")
 

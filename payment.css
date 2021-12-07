@@ -108,6 +108,11 @@ footer {
     border: none;
 }
 
+#totals{
+    display: flex;
+    flex-direction: column;
+}
+
 .material-icons {
     border-radius: 50%;
     font-family: 'Material Icons';
