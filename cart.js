@@ -88,7 +88,7 @@
 
               cartSubtotal.innerText = tempSubtotal + ".00"
 
-              cartTax.innerText = "$" + parseFloat(cartSubtotal.innerText * 0.06)
+              cartTax.innerText = "$" + parseFloat(cartSubtotal.innerText * 0.06).toFixed(2)
               
               cartTotal += parseFloat(cartSubtotal.innerText * 0.06) +tempSubtotal
 
