@@ -199,12 +199,12 @@ header > img {
     }
     main{
         background-color: whitesmoke;
+        height:100vh;
     }
 
     footer{
     position: relative;
     margin-top:1em;
-
     
     }
 
