@@ -177,6 +177,8 @@ header > a {
     right:0;
     margin: 0.5em;
     display:none;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
 }
 
 header > img {
