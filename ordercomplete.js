@@ -20,7 +20,7 @@
   //let cartArray = cartProducts.addedProducts;
   let cartArray = [];
   if (cartProducts != null) {
-    cartArray = cartProducts.addedProducts;
+    cartArray = cartProducts;
   }
 
   for (let i=0; i<cartArray.length; i++) {

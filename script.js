@@ -235,25 +235,24 @@ footerButton.addEventListener('click', event => {
 
         let addProductToCart = { name: allPotions[id].name, price: allPotions[id].price, quantity: qty, idNumber:allPotions[id].idNumber};
 
+
         
 
         if (localStorage.cartContent !== undefined) {
 
+
+        let storedCartArray = JSON.parse(localStorage.getItem('cartContent'));
             
+          storedCartArray.push(addProductToCart)
 
-            let storedCartArray = JSON.parse(localStorage.getItem('cartContent'));
-            
-
-            storedCartArray.addedProducts.push(addProductToCart)
-
-            localStorage.setItem('cartContent', JSON.stringify(storedCartArray))
-        
+          localStorage.setItem('cartContent', JSON.stringify(storedCartArray))    
         
         }
+
         else {
 
 
-            Cart.addedProducts.push(addProductToCart)
+            Cart.push(addProductToCart)
             
             localStorage.setItem('cartContent', JSON.stringify(Cart))
 
