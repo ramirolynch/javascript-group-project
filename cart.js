@@ -1,7 +1,6 @@
 (function(){
     
     let cartProducts = JSON.parse(localStorage.getItem("cartContent"));
-   // ramiro note: I had to change this line
    let cartArray = [];
     if (cartProducts != null) {
       cartArray = cartProducts;
