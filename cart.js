@@ -12,6 +12,9 @@
     const cartSubtotal = document.getElementById("subtotal")
     const cartTax = document.getElementById("tax")
     const cartTotalFooter = document.getElementById("cartTotal")
+    const allFooter = document.querySelector("footer")
+
+  
     
 
 
@@ -66,11 +69,26 @@
                 cartTable.appendChild(tbl)
 
                 row.appendChild(removeButton)
-                
-
-
               })
             }
+
+            let x = window.matchMedia("(max-width: 769px)")
+            let numberOfRows = tbl.getElementsByTagName("tr").length
+            if (numberOfRows <= 4 && x.matches){
+              console.log("it works")
+              allFooter.style.position = "fixed"
+              
+            } else if (numberOfRows >= 5 && x.matches) {
+              console.log("no really it's working")
+              allFooter.style.position = "relative"
+            }
+  
+   
+            
+
+         
+         
+            
 
 
               let tempSubtotal = 0
@@ -79,7 +97,7 @@
 
               if (localStorage.length > 0) {
               for (let i=0; i<cartArray.length; i++) {
-                console.log(cartArray[i])
+                // console.log(cartArray[i])
 
                 tempSubtotal += cartArray[i].quantity * cartArray[i].price
                
@@ -101,14 +119,16 @@
       
         if(parseInt(event.target.id) === cartArray[i].idNumber) {
 
-          cartArray.splice(cartArray[i], 1)
+          cartArray.splice(i, 1)
          
           localStorage.setItem('cartContent', JSON.stringify(cartArray))
           break;
         }
       }
-
+      
     event.target.parentNode.remove();
+    window.location.reload();
+    
     })
 // end of ramiro's addition
 
