@@ -1,7 +1,6 @@
 (function(){
     
     let cartProducts = JSON.parse(localStorage.getItem("cartContent"));
-   // ramiro note: I had to change this line
    let cartArray = [];
     if (cartProducts != null) {
       cartArray = cartProducts;
@@ -89,7 +88,7 @@
 
               cartSubtotal.innerText = tempSubtotal + ".00"
 
-              cartTax.innerText = "$" + parseFloat(cartSubtotal.innerText * 0.06)
+              cartTax.innerText = "$" + parseFloat(cartSubtotal.innerText * 0.06).toFixed(2)
               
               cartTotal += parseFloat(cartSubtotal.innerText * 0.06) +tempSubtotal
 
