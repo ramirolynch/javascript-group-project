@@ -44,6 +44,7 @@ main{
     flex-direction: column;
     padding-left: 1em;
     padding-bottom: 75px;
+    height: 100vh;
 }
 footer{
    
@@ -74,8 +75,7 @@ footer{
 @media screen and (min-width: 769px) {
 
     body{
-        padding-left: 15%;
-        padding-right: 15%;
+        margin: 0 auto;
         width: 75%;
         background-color: white;
     }
@@ -84,13 +84,11 @@ footer{
     }
     main{
         background-color: whitesmoke;
-        
+       
     }
 
     footer{
-    position: fixed;
-    margin-left:16%;
-    width: 75%;
+    position: relative;
     }
 
 }
