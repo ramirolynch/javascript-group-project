@@ -72,11 +72,11 @@ document.getElementById("cash-input").addEventListener("change", function(){
   let cashGiven = parseFloat(document.getElementById("cash-input").value);
   let changeBack = document.querySelector("#change-back");
 
-  let changeTotal = cashGiven - checkoutTotal;
+  let changeTotal = cashGiven - (checkoutSubtotal + (checkoutSubtotal * .06));
 
-  if (cashGiven < checkoutTotal){
+  if (cashGiven < (checkoutSubtotal + (checkoutSubtotal * .06))){
     changeBack.innerText = `Total is higher than cash given, please add at least $${(changeTotal*-1).toFixed(2)} and try again.`;
-  } else if (cashGiven >= checkoutTotal){
+  } else if (cashGiven >= (checkoutSubtotal + (checkoutSubtotal * .06))){
     changeBack.innerText = `$${changeTotal.toFixed(2)}`;
   } else {
     moreMoney.innerText = "Error, please try again with valid cash amount."

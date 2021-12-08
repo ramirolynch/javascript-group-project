@@ -35,10 +35,10 @@
 
   checkoutSubtotal += cartArray[i].price * cartArray[i].quantity;
   summarySubtotal.innerText = `Subtotal: $${checkoutSubtotal}.00`
-  summaryTax.innerText = "Tax: $" + (checkoutSubtotal * .06)
+  summaryTax.innerText = "Tax: $" + (checkoutSubtotal * .06).toFixed(2)
   summaryTotal.innerText = "Total: $" + (checkoutSubtotal + (checkoutSubtotal * .06))
   
-  
+ 
 };
 
   const newOrder = document.querySelector("#place-new-order")
