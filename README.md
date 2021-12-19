@@ -17,3 +17,6 @@ HTML, CSS, JavaScript
 #### Libraries Used
 none
 
+####
+Live Project @ https://ramirolynch.github.io/javascript-group-project/
+
