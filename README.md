@@ -20,3 +20,6 @@ none
 ####
 Live Project @ https://ramirolynch.github.io/javascript-group-project/
 
+####
+![alt text](/assets/point_of_sale.png)
+
